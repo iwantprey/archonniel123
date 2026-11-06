@@ -103,6 +103,12 @@ export default function Navbar() {
                 Store
               </span>
             </button>
+            <a
+              href="/jobs"
+              className="text-sm font-semibold text-slate-300 hover:text-white transition-colors"
+            >
+              Careers
+            </a>
           </nav>
 
           {/* Search Bar (Desktop / Tablet) */}
@@ -313,6 +319,13 @@ export default function Navbar() {
                 <span>Store</span>
                 <span className="text-[10px] bg-blue-600/40 text-blue-200 px-1.5 py-0.5 rounded">SHOP</span>
               </button>
+              <a
+                href="/jobs"
+                onClick={() => setMobileMenuOpen(false)}
+                className="px-3.5 py-2.5 text-left text-xs font-semibold text-slate-200 hover:bg-[#07132c] rounded-xl"
+              >
+                Careers
+              </a>
             </div>
 
             {/* Mobile Auth Button & Dashboard Switch */}

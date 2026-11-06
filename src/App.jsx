@@ -21,9 +21,15 @@ import RateOrderModal from './components/modals/RateOrderModal';
 import CustomerView from './views/CustomerView.jsx';
 import AdminView from './views/AdminView.jsx';
 import Toast from './components/ui/Toast';
+import Jobs from './views/Jobs.jsx';
 
 function AppContent() {
   const { currentView, isApiConnected, isApiLoading, refreshAllData } = useApp();
+
+  // The careers page is independent of the store API and can load directly at /jobs.
+  if (window.location.pathname.replace(/\/$/, '') === '/jobs') {
+    return <Jobs />;
+  }
 
   // Kung hindi pa connected sa backend API, LOADING LANG ang buong website
   if (!isApiConnected || isApiLoading) {
